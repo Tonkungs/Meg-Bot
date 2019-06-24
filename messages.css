@@ -1,0 +1,112 @@
+.conversation-contaner>.messages {
+    flex-grow: 8;
+    border: 1px solid #E5E5E5;
+    /* position: relative; */
+}
+
+.conversation-contaner>.messages>.messages-type {
+    border: 1px solid #E5E5E5;
+    /* height: 10%; */
+    height: 3em;
+}
+
+.conversation-contaner>.messages>.messages-type>.messages-switch {
+    text-align: right;
+    margin-right: 1em;
+    line-height: 3em;
+}
+
+.conversation-contaner>.messages>.messages-show {
+    border: 1px solid #E5E5E5;
+    /* background-color: pink; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* สูง 100%  
+    ลบ ด้านล่าง 15% 
+    ลบ ด้านบน  3em
+    ลบ ขอบ     5px*/
+    /* 75% โดยประมาณ */
+    height: calc(100% - 14% - 3em - 5px);
+}
+
+.conversation-contaner>.messages>.messages-show {
+    background-color: #fff;
+}
+
+.conversation-contaner>.messages>.messages-show>.message-box-other,
+.conversation-contaner>.messages>.messages-show>.message-box-own {
+    /* background-color: #ff88ff; */
+    display: flex;
+    /* justify-content: center; */
+    margin-bottom: 1em;
+}
+
+.conversation-contaner>.messages>.messages-show>.message-box-other>.photo-display,
+.conversation-contaner>.messages>.messages-show>.message-box-own>.photo-display {
+    flex-grow: 1;
+    min-width: 50px;
+    max-width: 80px;
+    padding: 0.5em;
+}
+
+.conversation-contaner>.messages>.messages-show>.message-box-other>.photo-display>img,
+.conversation-contaner>.messages>.messages-show>.message-box-own>.photo-display>img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.conversation-contaner>.messages>.messages-show>.message-box-other>.display-text,
+.conversation-contaner>.messages>.messages-show>.message-box-own>.display-text {
+    flex-grow: 1;
+    /* padding: 1em; */
+}
+
+.conversation-contaner>.messages>.messages-show>.message-box-own>.display-text {
+    margin-left: 3em;
+}
+
+.conversation-contaner>.messages>.messages-show>.message-box-other>.display-text>.display-name,
+.conversation-contaner>.messages>.messages-show>.message-box-own>.display-text>.display-name {}
+
+.conversation-contaner>.messages>.messages-show>.message-box-own>.display-text>.display-name {
+    text-align: right;
+}
+
+.conversation-contaner>.messages>.messages-show>.message-box-other>.display-text>.text,
+.conversation-contaner>.messages>.messages-show>.message-box-own>.display-text>.text {
+    background-color: #e6e4e4;
+    border-radius: 20px;
+    /* สุงขั้นต่ำ */
+    min-height: 2em;
+    font-size: 1em;
+    line-height: 1.4em;
+    padding: 0.2em 0.5em;
+    width: 90%;
+}
+
+.conversation-contaner>.messages>.messages-show>.message-box-own>.display-text>.text {
+    background-color: #b6eeb9;
+    width: 95%;
+}
+
+.conversation-contaner>.messages>.messages-input {
+    border: 1px solid #E5E5E5;
+    /* background-color: yellowgreen; */
+    /* height: calc(100% - 80% - 3em - 5px); */
+    height: 14%;
+    display: flex;
+    /* max-height: 55px; */
+}
+
+.conversation-contaner>.messages>.messages-input>.messages-input-text {
+    /* height: 14%; */
+    overflow-y: scroll;
+    /* max-height: 55px; */
+    padding: 0.5em 0.5em;
+    width: 80%;
+}
+
+.conversation-contaner>.messages>.messages-input>input {
+    width: 20%;
+}
