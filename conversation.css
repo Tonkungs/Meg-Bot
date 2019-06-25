@@ -77,4 +77,12 @@
 
 .conversation-contaner>.conversation-list>ul>li>.display>.display-text>.text {
     font-size: 0.7em;
+    /* กันคำเกิน */
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    max-height: 3.6em;
+    line-height: 1.8em;
+    /* where max-height: = line-height: × <number-of-lines> in em. */
 }

@@ -80,6 +80,14 @@
 .conversation-contaner>.messages>.messages-show>.message-box-other>.display-text>.text-time,
 .conversation-contaner>.messages>.messages-show>.message-box-own>.display-text>.text-time {
     text-align: left;
+    font-size: 14px;
+    margin-top: 5px;
+    color: #8b8b8b;
+}
+
+.conversation-contaner>.messages>.messages-show>.message-box-own>.display-text>.text-time {
+    margin-left: 8%;
+    width: 90%;
 }
 
 .conversation-contaner>.messages>.messages-show>.message-box-other>.display-text>.text,
@@ -88,14 +96,19 @@
     border-radius: 20px;
     /* สุงขั้นต่ำ */
     min-height: 2em;
-    font-size: 15px;
-    line-height: 2em;
+    font-size: 14px;
+    line-height: 1.5em;
     padding: 0.2em 0.5em;
+}
+
+.conversation-contaner>.messages>.messages-show>.message-box-other>.display-text>.text,
+.conversation-contaner>.messages>.messages-show>.message-box-own>.display-text>.text {
+    width: 90%
 }
 
 .conversation-contaner>.messages>.messages-show>.message-box-own>.display-text>.text {
     background-color: #b6eeb9;
-    align-self: auto;
+    margin-left: 8%;
 }
 
 
