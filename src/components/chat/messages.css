@@ -1,0 +1,138 @@
+/* src/components/chat/messages.css */
+
+.conversation-contaner>.messages {
+    flex-grow: 8;
+    border: 1px solid #E5E5E5;
+}
+
+.conversation-contaner>.messages>.messages-type {
+    border: 1px solid #E5E5E5;
+    height: 3em;
+}
+
+.conversation-contaner>.messages>.messages-type>.messages-switch {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.conversation-contaner>.messages>.messages-type>.messages-switch>.switch-text {
+    margin: 0px 8px;
+}
+
+.conversation-contaner>.messages>.messages-show {
+    border: 1px solid #E5E5E5;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* สูง 100%  
+    ลบ ด้านล่าง 15% 
+    ลบ ด้านบน  3em
+    ลบ ขอบ     5px*/
+    /* 75% โดยประมาณ */
+    height: calc(100% - 10% - 3em - 5px);
+}
+
+
+/* ข้อความ */
+
+
+/* พื้นหลังแชต */
+
+.conversation-contaner>.messages>.messages-show {
+    background-color: #fff;
+}
+
+
+/* การแสดงข้อความ 1 ข้อความ */
+
+.conversation-contaner>.messages>.messages-show>.message-box,
+.conversation-contaner>.messages>.messages-show>.message-box-own {
+    /* background-color: #ff88ff; */
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0.5em;
+}
+
+.conversation-contaner>.messages>.messages-show>.message-box-own {
+    justify-content: flex-end;
+}
+
+.conversation-contaner>.messages>.messages-show>.message-box>.photo-display,
+.conversation-contaner>.messages>.messages-show>.message-box-own>.photo-display {
+    /* flex-grow: 1; */
+    min-width: 50px;
+    max-width: 80px;
+    padding: 0.5em;
+}
+
+
+/* ภาพ display */
+
+.conversation-contaner>.messages>.messages-show>.message-box>.photo-display>img,
+.conversation-contaner>.messages>.messages-show>.message-box-own >.photo-display>img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+
+/* ให้เวลาชิดซ้ายเอาไว้ */
+
+.conversation-contaner>.messages>.messages-show>.message-box>.display-text>.text-time,
+.conversation-contaner>.messages>.messages-show>.message-box-own>.display-text>.text-time {
+    text-align: left;
+    font-size: 14px;
+    margin-top: 5px;
+    color: #8b8b8b;
+}
+
+.conversation-contaner>.messages>.messages-show>.message-box-own>.display-text>.text-time {
+    margin-left: 8%;
+    width: 90%;
+}
+
+.conversation-contaner>.messages>.messages-show>.message-box>.display-text>.text,
+.conversation-contaner>.messages>.messages-show>.message-box-own>.display-text>.text {
+    background-color: #e6e4e4;
+    border-radius: 20px;
+    /* สุงขั้นต่ำ */
+    min-height: 2em;
+    font-size: 14px;
+    line-height: 1.5em;
+    padding: 0.2em 0.5em;
+}
+/* ยาวสูงสุด 90% */
+.conversation-contaner>.messages>.messages-show>.message-box>.display-text>.text,
+.conversation-contaner>.messages>.messages-show>.message-box-own>.display-text>.text {
+    width: 90%
+}
+/* ข้อความเจ้าของ */
+.conversation-contaner>.messages>.messages-show>.message-box-own>.display-text>.text {
+    background-color: #b6eeb9;
+}
+
+
+/* การกรอกข้อความ */
+
+.conversation-contaner>.messages>.messages-input {
+    border: 1px solid #E5E5E5;
+    height: 10%;
+    display: flex;
+}
+
+.conversation-contaner>.messages>.messages-input>.messages-input-text {
+    overflow-y: scroll;
+    padding: 0.5em 0.5em;
+    min-width: 80%;
+    max-width: 80%;
+}
+
+.conversation-contaner>.messages>.messages-input>.messages-input-text[contenteditable="false"] {
+    background-color: #979797;
+    cursor: context-menu;
+}
+
+.conversation-contaner>.messages>.messages-input>input {
+    width: 20%;
+}

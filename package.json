@@ -1,0 +1,101 @@
+{
+    "name": "meg-bot",
+    "version": "1.0.0",
+    "main": "index.js",
+    "engines": {
+        "node": ">=8.10.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js,jsx}": [
+            "eslint"
+        ],
+        "*.{js,jsx,md}": [
+            "prettier --list-different"
+        ]
+    },
+    "license": "MIT",
+    "scripts": {
+        "p": "prettier --write 'src/**/*.js'",
+        "pw": "onchange 'src/**/*.js' -- prettier --write {{changed}}",
+        "lint": "eslint src -c .eslintrc --ext js,jsx",
+        "lint:fix": "yarn run lint --fix",
+        "check-staged": "lint-staged",
+        "prettier": "./node_modules/.bin/prettier --write src/*.js",
+        "common": "webpack-dev-server --mode development --open --config webpack/webpack.common.js",
+        "dev": "webpack-dev-server --mode development --open --config webpack/webpack.dev.js",
+        "build": "webpack --mode production --config webpack/webpack.prod.js"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.4.5",
+        "@babel/plugin-proposal-class-properties": "^7.4.4",
+        "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+        "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+        "@babel/plugin-transform-react-jsx": "^7.3.0",
+        "@babel/preset-env": "^7.4.5",
+        "@babel/preset-react": "^7.0.0",
+        "@gfx/zopfli": "^1.0.13",
+        "babel-eslint": "^10.0.2",
+        "babel-loader": "^8.0.6",
+        "babel-plugin-import": "^1.12.0",
+        "babel-plugin-react-css-modules": "^5.2.6",
+        "babel-plugin-react-hot-loader": "^3.1.3",
+        "clean-webpack-plugin": "^3.0.0",
+        "compression-webpack-plugin": "^3.0.0",
+        "css-loader": "^3.0.0",
+        "eslint": "^6.0.0",
+        "eslint-config-airbnb": "^17.1.0",
+        "eslint-config-prettier": "^5.0.0",
+        "eslint-plugin-import": "^2.17.3",
+        "eslint-plugin-jsx-a11y": "^6.2.1",
+        "eslint-plugin-prettier": "^3.1.0",
+        "eslint-plugin-react": "^7.13.0",
+        "file-loader": "^4.0.0",
+        "html-webpack-plugin": "^3.2.0",
+        "husky": "^2.4.1",
+        "lint-staged": "^8.2.1",
+        "mini-css-extract-plugin": "^0.7.0",
+        "moment-locales-webpack-plugin": "^1.0.7",
+        "node-sass": "^4.12.0",
+        "path": "^0.12.7",
+        "postcss-loader": "^3.0.0",
+        "redux-devtools-extension": "^2.13.8",
+        "sass-loader": "^7.1.0",
+        "source-map-loader": "^0.2.4",
+        "style-loader": "^0.23.1",
+        "uglifyjs-webpack-plugin": "^2.1.3",
+        "url-loader": "^2.0.0",
+        "webpack": "^4.35.0",
+        "webpack-bundle-analyzer": "^3.3.2",
+        "webpack-cli": "^3.3.5",
+        "webpack-dev-server": "^3.7.2",
+        "webpack-merge": "^4.2.1"
+    },
+    "dependencies": {
+        "@babel/plugin-transform-runtime": "^7.4.4",
+        "@babel/polyfill": "^7.4.4",
+        "@hot-loader/react-dom": "^16.8.6",
+        "formik": "^1.5.7",
+        "install": "^0.12.2",
+        "moment": "^2.24.0",
+        "onchange": "^6.0.0",
+        "prettier": "^1.18.2",
+        "prop-types": "^15.7.2",
+        "react": "^16.8.6",
+        "react-contenteditable": "^3.2.6",
+        "react-dom": "^16.8.6",
+        "react-hot-loader": "^4.11.1",
+        "react-loadable": "^5.5.0",
+        "react-redux": "^7.1.0",
+        "react-router-dom": "^5.0.1",
+        "redux": "^4.0.1",
+        "redux-thunk": "^2.3.0",
+        "sanitize-html": "^1.20.1",
+        "standard": "^12.0.1",
+        "yup": "^0.27.0"
+    }
+}

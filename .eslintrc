@@ -1,0 +1,94 @@
+{
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "codeFrame": false
+  },
+  "plugins": [
+    "react",
+    "prettier"
+  ],
+  "rules": {
+    "linebreak-style": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          "jsx"
+        ]
+      }
+    ],
+    "prettier/prettier": "error",
+    "max-len": [
+      "error",
+      {
+        "code": 255,
+        "ignoreComments": true,
+        "ignoreUrls": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "import/no-extraneous-dependencies": "off",
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": [
+          "state"
+        ]
+      }
+    ],
+    "class-methods-use-this": "off",
+    "jsx-a11y/label-has-for": 2,
+    "jsx-a11y/label-has-associated-control": 2,
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "import/named": "off",
+    "import/no-duplicates": "off",
+    "import/no-nodejs-modules": "off",
+    "import/order": "off",
+    "import/no-self-import": "off",
+    "import/no-cycle": "off",
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off",
+    "import/no-useless-path-segments": [
+      "error",
+      {
+        "noUselessIndex": true
+      }
+    ],
+    "camelcase": [
+      0,
+      {
+        "properties": "never",
+        "ignoreDestructuring": true
+      }
+    ]
+  },
+  "env": {
+    "browser": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": [
+          "./src/actions",
+          "./src/page",
+          "./src/reducers",
+          "./src/store"
+        ]
+      },
+      "webpack": {
+        "config": "./config/webpack-common-config.js"
+      }
+    }
+  }
+}

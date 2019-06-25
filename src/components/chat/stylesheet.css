@@ -1,0 +1,14 @@
+/* src/components/chat/stylesheet.css */
+
+h5 {
+    margin: 0px;
+    padding: 0px;
+}
+.conversation-contaner {
+    position: relative;
+    display: flex;
+    width: 100%;
+    /* height: 100%; */
+    height: 100vh;
+    /* background-color: peachpuff; */
+}
