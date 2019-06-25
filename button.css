@@ -15,6 +15,15 @@
     cursor: pointer;
 }
 
+.button[disabled],
+.button-green:hover[disabled] {
+    background-color: #979797;
+    border: 2px solid #979797;
+    color: #FFF;
+    /* เป็นเมาส์ธรรมดา */
+    cursor: context-menu;
+}
+
 .button-green {
     background-color: white;
     color: black;
