@@ -44,20 +44,20 @@
 
 /* การแสดงข้อความ 1 ข้อความ */
 
-.conversation-contaner>.messages>.messages-show>.message-box-other,
-.conversation-contaner>.messages>.messages-show>.message-box-own {
+.conversation-contaner>.messages>.messages-show>.message-box,
+.conversation-contaner>.messages>.messages-show>.message-box[own] {
     /* background-color: #ff88ff; */
     display: flex;
     justify-content: flex-start;
     margin-bottom: 0.5em;
 }
 
-.conversation-contaner>.messages>.messages-show>.message-box-own {
+.conversation-contaner>.messages>.messages-show>.message-box[own] {
     justify-content: flex-end;
 }
 
-.conversation-contaner>.messages>.messages-show>.message-box-other>.photo-display,
-.conversation-contaner>.messages>.messages-show>.message-box-own>.photo-display {
+.conversation-contaner>.messages>.messages-show>.message-box>.photo-display,
+.conversation-contaner>.messages>.messages-show>.message-box[own]>.photo-display {
     /* flex-grow: 1; */
     min-width: 50px;
     max-width: 80px;
@@ -67,8 +67,8 @@
 
 /* ภาพ display */
 
-.conversation-contaner>.messages>.messages-show>.message-box-other>.photo-display>img,
-.conversation-contaner>.messages>.messages-show>.message-box-own>.photo-display>img {
+.conversation-contaner>.messages>.messages-show>.message-box>.photo-display>img,
+.conversation-contaner>.messages>.messages-show>.message-box[own]>.photo-display>img {
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -77,21 +77,21 @@
 
 /* ให้เวลาชิดซ้ายเอาไว้ */
 
-.conversation-contaner>.messages>.messages-show>.message-box-other>.display-text>.text-time,
-.conversation-contaner>.messages>.messages-show>.message-box-own>.display-text>.text-time {
+.conversation-contaner>.messages>.messages-show>.message-box>.display-text>.text-time,
+.conversation-contaner>.messages>.messages-show>.message-box[own]>.display-text>.text-time {
     text-align: left;
     font-size: 14px;
     margin-top: 5px;
     color: #8b8b8b;
 }
 
-.conversation-contaner>.messages>.messages-show>.message-box-own>.display-text>.text-time {
+.conversation-contaner>.messages>.messages-show>.message-box[own]>.display-text>.text-time {
     margin-left: 8%;
     width: 90%;
 }
 
-.conversation-contaner>.messages>.messages-show>.message-box-other>.display-text>.text,
-.conversation-contaner>.messages>.messages-show>.message-box-own>.display-text>.text {
+.conversation-contaner>.messages>.messages-show>.message-box>.display-text>.text,
+.conversation-contaner>.messages>.messages-show>.message-box[own]>.display-text>.text {
     background-color: #e6e4e4;
     border-radius: 20px;
     /* สุงขั้นต่ำ */
@@ -101,12 +101,12 @@
     padding: 0.2em 0.5em;
 }
 
-.conversation-contaner>.messages>.messages-show>.message-box-other>.display-text>.text,
-.conversation-contaner>.messages>.messages-show>.message-box-own>.display-text>.text {
+.conversation-contaner>.messages>.messages-show>.message-box>.display-text>.text,
+.conversation-contaner>.messages>.messages-show>.message-box[own]>.display-text>.text {
     width: 90%
 }
 
-.conversation-contaner>.messages>.messages-show>.message-box-own>.display-text>.text {
+.conversation-contaner>.messages>.messages-show>.message-box[own]>.display-text>.text {
     background-color: #b6eeb9;
     margin-left: 8%;
 }
