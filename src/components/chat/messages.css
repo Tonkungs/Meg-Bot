@@ -105,7 +105,7 @@
 /* ยาวสูงสุด 90% */
 .conversation-contaner>.messages>.messages-show>.message-box>.display-text>.text,
 .conversation-contaner>.messages>.messages-show>.message-box-own>.display-text>.text {
-    width: 90%
+    /* width: 90% */
 }
 /* ข้อความเจ้าของ */
 .conversation-contaner>.messages>.messages-show>.message-box-own>.display-text>.text {

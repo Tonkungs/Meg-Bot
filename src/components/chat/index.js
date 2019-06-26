@@ -20,6 +20,7 @@ class Chat extends React.Component {
     constructor(props) {
         super(props);
         this.ContentEditable = React.createRef()
+        this.lastChat = React.createRef();
         this.setInputCheckbox = this.setInputCheckbox.bind(this)
         this.pressAnswer = this.pressAnswer.bind(this)
         this.keyPress = this.keyPress.bind(this);
@@ -69,6 +70,13 @@ class Chat extends React.Component {
         }
     }
 
+    componentDidUpdate() {
+        // https://stackoverflow.com/questions/43441856/reactjs-how-to-scroll-to-an-element
+        // ให้วิ่งลงล่างสุด
+        const node = this.lastChat.current
+        node.scrollTop = node.scrollHeight;
+    }
+
     handleChange = evt => {
         const html = sanitizeHtml(evt.target.value, this.sanitizeConf)
         this.setState({ html });
@@ -86,8 +94,12 @@ class Chat extends React.Component {
         this.setState({ is_bot: !evt.target.defaultChecked });
     }
 
+    
     pressAnswer = () => {
         const { messages_list, html } = this.state
+
+
+        // node.scrollTop = node.scrollHeight;
         this.setState({
             messages_list: [...messages_list,
             {
@@ -106,6 +118,7 @@ class Chat extends React.Component {
 
     render = () => {
         const { html, conversation_list, messages_list, is_bot } = this.state;
+
         return (<React.Fragment>
             <div className="conversation-contaner">
                 <div className="conversation-list">
@@ -114,7 +127,7 @@ class Chat extends React.Component {
                     </div>
                     <ul>
                         {
-                            conversation_list.forEach((item) => {
+                            conversation_list.map((item) => {
                                 const { active, display_photo, display_name, update_at, last_text } = item
                                 return <li active={active.toString()} key={`${display_name}-${active}`}>
                                     <div className="display">
@@ -155,10 +168,10 @@ class Chat extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="messages-show">
+                    <div className="messages-show" ref={this.lastChat} >
                         {
-                            messages_list.forEach(items => {
-                                const { is_own , display_name, update_at, text } = items
+                            messages_list.map(items => {
+                                const { is_own, display_name, update_at, text } = items
                                 if (is_own === true) {
                                     return (
                                         <div className="message-box-own" key={`${display_name}-${update_at}`}>
