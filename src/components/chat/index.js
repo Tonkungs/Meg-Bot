@@ -179,9 +179,9 @@ class Chat extends React.Component {
                                                 <div className="text">
                                                     {text}
                                                 </div>
-                                                <div className="text-time">
+                                                {/* <div className="text-time">
                                                     <h5 >{update_at}</h5>
-                                                </div>
+                                                </div> */}
                                             </div>
                                         </div>
                                     )

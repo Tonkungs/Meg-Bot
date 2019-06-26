@@ -5,6 +5,7 @@ h5 {
     padding: 0px;
 }
 .conversation-contaner {
+    box-sizing: border-box;
     position: relative;
     display: flex;
     width: 100%;
